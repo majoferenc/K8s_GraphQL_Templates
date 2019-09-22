@@ -1,0 +1,1 @@
+helm install --name graphql-router-service charts/graphql_router_service

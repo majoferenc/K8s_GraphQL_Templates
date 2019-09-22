@@ -1,0 +1,15 @@
+apiVersion: skaffold/v1beta13
+kind: Config
+metadata:
+  name: vue-frontend-pwa
+build:
+  tagPolicy:
+    sha256: {}
+  artifacts:
+    - image: marianferenc/vue_frontend_pwa
+      context: .
+deploy:
+  helm:
+    releases:
+      - name: vue-frontend-pwa
+        chartPath: charts/vue_frontend_pwa

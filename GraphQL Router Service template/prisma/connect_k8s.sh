@@ -1,0 +1,1 @@
+kubectl port-forward --namespace default svc/prisma 4466:4466

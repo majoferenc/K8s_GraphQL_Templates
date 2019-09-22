@@ -1,0 +1,1 @@
+helm install --name mongo stable/mongodb --set mongodbRootPassword=root

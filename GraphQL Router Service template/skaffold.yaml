@@ -1,0 +1,15 @@
+apiVersion: skaffold/v1beta13
+kind: Config
+metadata:
+  name: graphql-router-service
+build:
+  tagPolicy:
+    sha256: {}
+  artifacts:
+    - image: marianferenc/graphql_router_service
+      context: .
+deploy:
+  helm:
+    releases:
+      - name: graphql-router-service
+        chartPath: charts/graphql_router_service

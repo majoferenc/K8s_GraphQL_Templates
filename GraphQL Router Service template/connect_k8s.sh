@@ -1,0 +1,1 @@
+kubectl port-forward --namespace default svc/graphql-router-service-graphql-router-service 4000:4000

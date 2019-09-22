@@ -1,0 +1,15 @@
+apiVersion: skaffold/v1beta13
+kind: Config
+metadata:
+  name: go-graphql-backend
+build:
+  tagPolicy:
+    sha256: {}
+  artifacts:
+    - image: marianferenc/go_graphql_backend
+      context: .
+deploy:
+  helm:
+    releases:
+      - name: go-graphql-backend
+        chartPath: charts/go_graphql_backend
