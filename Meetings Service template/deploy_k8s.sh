@@ -1,0 +1,1 @@
+helm install --name meetings-service charts/expressjs_service

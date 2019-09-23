@@ -1,0 +1,1 @@
+kubectl port-forward svc/meetings-service-expressjs-service 8092:8092

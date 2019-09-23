@@ -1,0 +1,1 @@
+helm install --name frontend-service charts/vue_frontend_pwa
