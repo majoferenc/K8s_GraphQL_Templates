@@ -6,11 +6,7 @@
         <span class="font-weight-light">App</span>
       </v-toolbar-title>
       <v-spacer></v-spacer>
-      <v-btn
-        text
-        href="https://github.com/vuetifyjs/vuetify/releases/latest"
-        target="_blank"
-      >
+      <v-btn text href="https://github.com/vuetifyjs/vuetify/releases/latest" target="_blank">
         <span class="mr-2">Latest Release</span>
       </v-btn>
     </v-app-bar>
@@ -22,19 +18,13 @@
 </template>
 
 <script>
-import ApolloExample from './components/ApolloExample'
-
 export default {
-  name: 'App',
-  components: {
-    ApolloExample
-  },
+  name: "App",
   data: () => ({
     //
   })
-}
+};
 </script>
 
 <style>
-
 </style>

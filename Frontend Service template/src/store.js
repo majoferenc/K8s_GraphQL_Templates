@@ -1,27 +1,19 @@
-import Vue from 'vue'
-import Vuex from 'vuex'
+import Vue from "vue";
+import Vuex from "vuex";
 
-Vue.use(Vuex)
+Vue.use(Vuex);
 
-const state = {
+const state = {};
 
-}
+const mutations = {};
 
-const mutations = {
+const actions = {};
 
-}
-
-const actions = {
-
-}
-
-const plugins = [
-
-]
+const plugins = [];
 
 export default new Vuex.Store({
   state,
   mutations,
   actions,
   plugins
-})
+});

@@ -1,26 +1,19 @@
-import Vue from 'vue'
-import Router from 'vue-router'
-import HelloWorld from './components/HelloWorld'
-import ApolloExample from './components/ApolloExample'
+import Vue from "vue";
+import Router from "vue-router";
+import HelloWorld from "./components/HelloWorld";
 
-Vue.use(Router)
+Vue.use(Router);
 
 const router = new Router({
   scrollBehavior: () => ({ y: 0 }),
   routes: [
     {
-      path: '/',
-      name: 'helloworld',
+      path: "/",
+      name: "helloworld",
       component: HelloWorld,
       props: true
-    },
-    {
-      path: '/apopplo',
-      name: 'apollo',
-      component: ApolloExample,
-      props: false
     }
   ]
-})
+});
 
-export default router
+export default router;
