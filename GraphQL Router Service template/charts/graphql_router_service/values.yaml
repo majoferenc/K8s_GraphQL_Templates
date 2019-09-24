@@ -8,7 +8,7 @@ image:
   pullPolicy: IfNotPresent
 service:
   name: golang
-  type: ClusterIP
+  type: NodePort
   externalPort: 4000
   internalPort: 4000
 resources:
