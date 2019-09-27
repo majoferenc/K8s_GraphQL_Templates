@@ -1,6 +1,6 @@
 [environments]
   [environments.development]
-    name = "epressjs_service"
+    name = "meetings_service"
     namespace = "default"
     wait = true
     watch = false
