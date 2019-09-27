@@ -42,4 +42,4 @@ jobs:
     - docker push $DOCKER_REPO
   - stage: k8s deploy
     script:
-    - helm install --name meetings-service charts/expressjs_service
+    - helm install --name meetings-service charts/meetings_service
