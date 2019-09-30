@@ -3,26 +3,23 @@ kind: Deployment
 metadata:
   name: {{ template "fullname" . }}
   labels:
-    draft: {{ default "draft-app" .Values.draft }}
+    app: {{ template "fullname" . }}
     chart: "{{ .Chart.Name }}-{{ .Chart.Version | replace "+" "_" }}"
 spec:
   replicas: {{ .Values.replicaCount }}
   template:
     metadata:
       labels:
-        draft: {{ default "draft-app" .Values.draft }}
         app: {{ template "fullname" . }}
     spec:
       containers:
       - name: {{ .Chart.Name }}
         image: "{{ .Values.image.repository }}:{{ .Values.image.tag }}"
-        {{- if .Values.env.enabled -}}
-        env:
-        - name: VUE_APP_GRAPHQL_HTTP
-          value: {{ .Values.env.VUE_APP_GRAPHQL_HTTP }}}
-        {{- end -}}
         imagePullPolicy: {{ .Values.image.pullPolicy }}
         ports:
         - containerPort: {{ .Values.service.internalPort }}
+        env:
+        - name: VUE_APP_GRAPHQL_HTTP
+          value: {{ .Values.env.VUE_APP_GRAPHQL_HTTP }}}
         resources:
 {{ toYaml .Values.resources | indent 12 }}

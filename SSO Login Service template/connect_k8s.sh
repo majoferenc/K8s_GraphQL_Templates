@@ -1,1 +1,1 @@
-kubectl port-forward svc/sso-login-service-go-graphql-backend 81:80
+kubectl port-forward svc/login-service 8091:8091

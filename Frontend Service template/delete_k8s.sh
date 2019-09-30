@@ -1,1 +1,1 @@
-helm del --purge frontend_service;
+helm del --purge frontend-service;

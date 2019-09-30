@@ -1,1 +1,1 @@
-kubectl port-forward svc/frontend-service-vue-frontend-pwa 81:80
+kubectl port-forward svc/vue-frontend-pwa 81:80

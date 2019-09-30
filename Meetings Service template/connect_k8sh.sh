@@ -1,1 +1,1 @@
-kubectl port-forward svc/meetings-service-meetings-service 8092:8092
+kubectl port-forward svc/meetings-service 8092:8092

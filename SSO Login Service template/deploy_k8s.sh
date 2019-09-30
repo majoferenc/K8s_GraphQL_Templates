@@ -1,1 +1,1 @@
-helm install --name sso-login-service charts/go_graphql_service
+helm install --name sso-login-service charts/go_login_service

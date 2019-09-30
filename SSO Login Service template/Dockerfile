@@ -9,14 +9,9 @@ ADD . /awesomeProject/
 # Compile the binary, we don't want to run the cgo resolver
 RUN CGO_ENABLED=0 go build -o /awesomeProject/app .
 
-# final stage
-FROM alpine:3.8
+# final stage, extra small image 11 MB with our app!
+FROM scratch 
 
-# Secure against running as root
-RUN adduser -D -u 10000 builduser
-USER builduser
-
-WORKDIR /
 COPY --from=build-env /awesomeProject/app /
 
 EXPOSE 8091

@@ -1,7 +1,7 @@
 apiVersion: skaffold/v1beta13
 kind: Config
 metadata:
-  name: go-login-service
+  name: sso-login-service
 build:
   tagPolicy:
     sha256: {}

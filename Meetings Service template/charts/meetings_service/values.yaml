@@ -6,8 +6,8 @@ image:
   pullPolicy: IfNotPresent
   repository: marianferenc/meetings_service
 service:
-  name: node
-  type: ClusterIP
+  name: meetings-service
+  type: NodePort
   externalPort: 8092
   internalPort: 8092
 ingress:

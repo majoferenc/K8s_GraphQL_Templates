@@ -1,6 +1,6 @@
 [environments]
   [environments.development]
-    name = "vue_frontend_pwa"
+    name = "vue-frontend-pwa"
     namespace = "default"
     wait = true
     watch = false

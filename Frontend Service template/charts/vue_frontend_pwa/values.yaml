@@ -7,7 +7,7 @@ image:
   repository: marianferenc/vue_frontend_pwa
   tag: latest
 service:
-  name: node
+  name: vue-frontend-pwa
   type: NodePort
   externalPort: 80
   internalPort: 80
@@ -19,7 +19,7 @@ resources:
     cpu: 100m
     memory: 128Mi
 env:
-  enabled: true
   VUE_APP_GRAPHQL_HTTP: http://graphql-router-service:4000
 ingress:
   enabled: false
+basedomain: com
