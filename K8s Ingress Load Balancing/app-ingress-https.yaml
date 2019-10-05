@@ -1,20 +1,23 @@
 apiVersion: extensions/v1beta1
 kind: Ingress
 metadata:
-  name: app-ingress
+  name: app-ingress-https
   annotations:
     kubernetes.io/ingress.allow-http: "false"
 spec:
+  backend:
+    serviceName: frontend-service-vue-frontend-pwa
+    servicePort: 80
   tls:
   - secretName: my-secret # For Https traffic
   rules:
   - http:
       paths:
-      - path: /
+      - path: /*
         backend:
           serviceName: frontend-service-vue-frontend-pwa
           servicePort: 80
-      - path: /router
+      - path: /router*
         backend:
           serviceName: graphql-router-service-graphql-router-service
           servicePort: 4000

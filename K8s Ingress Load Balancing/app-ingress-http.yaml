@@ -1,0 +1,19 @@
+apiVersion: extensions/v1beta1
+kind: Ingress
+metadata:
+  name: app-ingress-http
+spec:
+  backend:
+    serviceName: frontend-service-vue-frontend-pwa
+    servicePort: 80
+  rules:
+  - http:
+      paths:
+      - path: /*
+        backend:
+          serviceName: frontend-service-vue-frontend-pwa
+          servicePort: 80
+      - path: /router*
+        backend:
+          serviceName: graphql-router-service-graphql-router-service
+          servicePort: 4000
