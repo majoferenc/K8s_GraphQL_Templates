@@ -13,7 +13,7 @@ spec:
         backend:
           serviceName: frontend-service-vue-frontend-pwa
           servicePort: 80
-      - path: /router*
+      - path: /router/*
         backend:
           serviceName: graphql-router-service-graphql-router-service
           servicePort: 4000
