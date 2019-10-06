@@ -5,7 +5,16 @@ metadata:
   namespace: "default"
   annotations:
     networking.gke.io/managed-certificates: "mydomain-certificate"
+    kubernetes.io/ingress.global-static-ip-name: "web-static-ip"
 spec:
   backend:
     serviceName: "vue-frontend-pwa"
     servicePort: 443
+    rules:
+    - host: meetingsibmhackathon.com
+      http:
+        paths:
+          - path: /*
+            backend: "vue-frontend-pwa"
+              servicePort: 443
+  backend: "vue-frontend-pwa"
