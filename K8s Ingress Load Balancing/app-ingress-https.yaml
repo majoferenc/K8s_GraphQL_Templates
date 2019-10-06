@@ -1,23 +1,11 @@
-apiVersion: extensions/v1beta1
-kind: Ingress
+apiVersion: "extensions/v1beta1"
+kind: "Ingress"
 metadata:
-  name: app-ingress-https
+  name: "https-ingress"
+  namespace: "default"
   annotations:
-    kubernetes.io/ingress.allow-http: "false"
+    networking.gke.io/managed-certificates: "mydomain-certificate"
 spec:
   backend:
-    serviceName: frontend-service-vue-frontend-pwa
-    servicePort: 80
-  tls:
-  - secretName: my-secret # For Https traffic
-  rules:
-  - http:
-      paths:
-      - path: /*
-        backend:
-          serviceName: frontend-service-vue-frontend-pwa
-          servicePort: 80
-      - path: /router/*
-        backend:
-          serviceName: graphql-router-service-graphql-router-service
-          servicePort: 4000
+    serviceName: "vue-frontend-pwa"
+    servicePort: 443
