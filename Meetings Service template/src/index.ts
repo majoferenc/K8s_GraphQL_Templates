@@ -23,8 +23,10 @@ app.use(
   })
 );
 
-http.listen(8092, () => {
-  console.log("Meetings Service launched at ::8092");
+const port = process.env.PORT || 8092;
+
+http.listen(port, () => {
+  console.log("Meetings Service launched at ::" + port);
   app.post("/meetings", (request: any, response: any) => {
     //TODO implement
   });
