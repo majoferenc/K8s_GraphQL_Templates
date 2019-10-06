@@ -1,0 +1,9 @@
+---
+applications:
+  - instances: 1
+    timeout: 180
+    name: meetingsibm
+    buildpack: staticfile_buildpack
+    memory: 256MB
+    domain: eu-de.cf.appdomain.cloud
+    host: meetingsibm
